@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration &amp; Profile Form</title>
+    <!-- Google Font: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ambient Background Floating Shapes -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <main class="page-container">
+        <div class="form-card">
+            <!-- Form Header -->
+            <header class="header">
+                <div class="pill-badge">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> All-In-One Input 
+                </div>
+                <h2>Interactive Form Showcase</h2>
+                <p>Every HTML5 input type displayed once. Submitting stores the data object directly in the browser console.</p>
+            </header>
+
+            <form id="myForm" novalidate>
+                <!-- 1. Hidden Input -->
+                <input type="hidden" name="formId" id="formId" value="OBJ_FORM_001">
+
+                <!-- Section: Personal Credentials -->
+                <div class="section-divider">
+                    <span class="divider-icon"><i class="fa-solid fa-user"></i></span>
+                    <span class="divider-text">Personal Credentials</span>
+                    <span class="divider-line"></span>
+                </div>
+
+                <div class="grid">
+                    <!-- 2. Text Input -->
+                    <div class="field">
+                        <label for="textInput">
+                            <span class="label-text">Full Name</span>
+                            <span class="tag">text</span>
+                        </label>
+                        <div class="input-box">
+                            <i class="fa-regular fa-user icon"></i>
+                            <input type="text" id="textInput" name="text" placeholder="Sanjeev" required>
+                        </div>
+                    </div>
+
+                    <!-- 3. Email Input -->
+                    <div class="field">
+                        <label for="emailInput">
+                            <span class="label-text">Email Address</span>
+                            <span class="tag">email</span>
+                        </label>
+                        <div class="input-box">
+                            <i class="fa-regular fa-envelope icon"></i>
+                            <input type="email" id="emailInput" name="email" placeholder="sanjeev@gmail.com" required>
+                        </div>
+                    </div>
+
+                    <!-- 4. Password Input -->
+                    <div class="field">
+                        <label for="passwordInput">
+                            <span class="label-text">Password</span>
+                            <span class="tag">password</span>
+                        </label>
+                        <div class="input-box">
+                            <i class="fa-solid fa-lock icon"></i>
+                            <input type="password" id="passwordInput" name="password" placeholder="Create password" required>
+                            <button type="button" class="eye-btn" id="togglePasswordBtn" title="Show / Hide Password">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 5. Number Input -->
+                    <div class="field">
+                        <label for="numberInput">
+                            <span class="label-text">Age</span>
+                            <span class="tag">number</span>
+                        </label>
+                        <div class="input-box">
+                            <i class="fa-solid fa-hashtag icon"></i>
+                            <input type="number" id="numberInput" name="number" placeholder="22" min="1" max="120">
+                        </div>
+                    </div>
+
+                    <!-- 6. Tel Input -->
+                    <div class="field">
+                        <label for="telInput">
+                            <span class="label-text">Phone Number</span>
+                            <span class="tag">tel</span>
+                        </label>
+                        <div class="input-box">
+                            <i class="fa-solid fa-phone icon"></i>
+                            <input type="tel" id="telInput" name="tel" placeholder="+91 9876543210">
+                        </div>
+                    </div>
+
+                    <!-- 7. Radio Input (Gender) -->
+                    <div class="field">
+                        <label>
+                            <span class="label-text">Gender</span>
+                            <span class="tag">radio</span>
+                        </label>
+                        <div class="radio-pills">
+                            <label class="radio-pill">
+                                <input type="radio" name="gender" value="Male" checked>
+                                <span class="pill-btn"><i class="fa-solid fa-mars"></i> Male</span>
+                            </label>
+                            <label class="radio-pill">
+                                <input type="radio" name="gender" value="Female">
+                                <span class="pill-btn"><i class="fa-solid fa-venus"></i> Female</span>
+                            </label>
+                            <label class="radio-pill">
+                                <input type="radio" name="gender" value="Other">
+                                <span class="pill-btn"><i class="fa-solid fa-genderless"></i> Other</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Online & Scheduling -->
+                <div class="section-divider">
+                    <span class="divider-icon"><i class="fa-solid fa-globe"></i></span>
+                    <span class="divider-text">Online &amp; Scheduling</span>
+                    <span class="divider-line"></span>
+                </div>
+
+                <div class="grid">
+                    <!-- 8. URL Input -->
+                    <div class="field">
+                        <label for="urlInput">
+                            <span class="label-text">Website URL</span>
+                            <span class="tag">url</span>
+                        </label>
+                        <div class="input-box">
+                            <i class="fa-solid fa-link icon"></i>
+                            <input type="url" id="urlInput" name="url" placeholder="https://mywebsite.com">
+                        </div>
+                    </div>
+
+                    <!-- 9. Search Input -->
+                    <div class="field">
+                        <label for="searchInput">
+                            <span class="label-text">Search Query</span>
+                            <span class="tag">search</span>
+                        </label>
+                        <div class="input-box">
+                            <i class="fa-solid fa-magnifying-glass icon"></i>
+                            <input type="search" id="searchInput" name="search" placeholder="Search keywords...">
+                        </div>
+                    </div>
+
+                    <!-- 10. Date Input -->
+                    <div class="field">
+                        <label for="dateInput">
+                            <span class="label-text">Date of Birth</span>
+                            <span class="tag">date</span>
+                        </label>
+                        <div class="input-box">
+                            <i class="fa-regular fa-calendar icon"></i>
+                            <input type="date" id="dateInput" name="date">
+                        </div>
+                    </div>
+
+                    <!-- 11. Time Input -->
+                    <div class="field">
+                        <label for="timeInput">
+                            <span class="label-text">Preferred Time</span>
+                            <span class="tag">time</span>
+                        </label>
+                        <div class="input-box">
+                            <i class="fa-regular fa-clock icon"></i>
+                            <input type="time" id="timeInput" name="time">
+                        </div>
+                    </div>
+
+                    <!-- 12. Datetime-Local Input -->
+                    <div class="field">
+                        <label for="datetimeInput">
+                            <span class="label-text">Appointment</span>
+                            <span class="tag">datetime-local</span>
+                        </label>
+                        <div class="input-box">
+                            <i class="fa-solid fa-calendar-days icon"></i>
+                            <input type="datetime-local" id="datetimeInput" name="datetime">
+                        </div>
+                    </div>
+
+                    <!-- 13. Month Input -->
+                    <div class="field">
+                        <label for="monthInput">
+                            <span class="label-text">Target Month</span>
+                            <span class="tag">month</span>
+                        </label>
+                        <div class="input-box">
+                            <i class="fa-regular fa-calendar-check icon"></i>
+                            <input type="month" id="monthInput" name="month">
+                        </div>
+                    </div>
+
+                    <!-- 14. Week Input -->
+                    <div class="field">
+                        <label for="weekInput">
+                            <span class="label-text">Work Week</span>
+                            <span class="tag">week</span>
+                        </label>
+                        <div class="input-box">
+                            <i class="fa-solid fa-calendar-week icon"></i>
+                            <input type="week" id="weekInput" name="week">
+                        </div>
+                    </div>
+
+                    <!-- 15. Select Dropdown -->
+                    <div class="field">
+                        <label for="countrySelect">
+                            <span class="label-text">Country</span>
+                            <span class="tag">select</span>
+                        </label>
+                        <div class="input-box">
+                            <i class="fa-solid fa-earth-americas icon"></i>
+                            <select id="countrySelect" name="country">
+                                <option value="">Choose Country</option>
+                                <option value="India">India</option>
+                                <option value="United States">United States</option>
+                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="Canada">Canada</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Germany">Germany</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Preferences & Media -->
+                <div class="section-divider">
+                    <span class="divider-icon"><i class="fa-solid fa-sliders"></i></span>
+                    <span class="divider-text">Preferences &amp; Media</span>
+                    <span class="divider-line"></span>
+                </div>
+
+                <div class="grid">
+                    <!-- 16. Range Input -->
+                    <div class="field">
+                        <label for="rangeInput">
+                            <span class="label-text">Proficiency Level</span>
+                            <span class="tag">range</span>
+                        </label>
+                        <div class="range-card">
+                            <div class="range-header">
+                                <span>0%</span>
+                                <span class="range-value-pill" id="rangeVal">50%</span>
+                                <span>100%</span>
+                            </div>
+                            <input type="range" name="range" id="rangeInput" min="0" max="100" value="50">
+                        </div>
+                    </div>
+
+                    <!-- 17. Color Input -->
+                    <div class="field">
+                        <label for="colorInput">
+                            <span class="label-text">Theme Color</span>
+                            <span class="tag">color</span>
+                        </label>
+                        <div class="color-card">
+                            <input type="color" name="color" id="colorInput" value="#6366f1">
+                            <div class="color-meta">
+                                <span class="color-dot" id="colorDot" style="background-color: #6366f1;"></span>
+                                <span class="color-code" id="colorHex">#6366f1</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 18. File Input -->
+                    <div class="field full-col">
+                        <label for="fileInput">
+                            <span class="label-text">Upload Document / Resume</span>
+                            <span class="tag">file</span>
+                        </label>
+                        <div class="file-dropzone" id="dropzoneBox">
+                            <input type="file" name="file" id="fileInput" class="file-hidden">
+                            <div class="dropzone-content" id="dropzoneDefault">
+                                <div class="upload-icon-circle">
+                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                </div>
+                                <div class="dropzone-text">
+                                    <strong>Click to browse</strong> or drag &amp; drop file here
+                                    <small>PDF, DOCX, PNG, JPG (up to 10MB)</small>
+                                </div>
+                            </div>
+                            <div class="dropzone-selected" id="dropzoneSelected" style="display: none;">
+                                <i class="fa-solid fa-file-circle-check file-ok-icon"></i>
+                                <span class="file-name" id="fileNameTxt">resume.pdf</span>
+                                <button type="button" class="file-clear-btn" id="clearFileBtn" title="Remove file">&times;</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 19. Textarea Input -->
+                    <div class="field full-col">
+                        <label for="textareaInput">
+                            <span class="label-text">Address / Bio Message</span>
+                            <span class="tag">textarea</span>
+                        </label>
+                        <div class="input-box textarea-box">
+                            <textarea id="textareaInput" name="textarea" rows="3" placeholder="Write your full address or detailed message..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- 20. Checkbox Input (Terms) -->
+                    <div class="field full-col">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="terms" id="termsCheckbox" required>
+                            <span class="checkbox-box"><i class="fa-solid fa-check"></i></span>
+                            <span class="checkbox-label">
+                                I verify all information is accurate and agree to the 
+                                <a href="javascript:void(0)" class="link">Terms of Service</a> &amp; 
+                                <a href="javascript:void(0)" class="link">Privacy Policy</a>.
+                            </span>
+                            <span class="tag">checkbox</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="actions">
+                    <button type="submit" id="submitBtn" class="btn btn-primary">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Submit Data</span>
+                    </button>
+                    <button type="button" id="resetBtn" class="btn btn-secondary" style="display: none;">
+                        <i class="fa-solid fa-rotate-left"></i>
+                        <span>Submit Again</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Floating Interactive Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-icon-wrap">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <div class="toast-body">
+            <h4 id="toastTitle">Data Stored in Console</h4>
+            <p id="toastMsg">Open DevTools console (F12) to inspect the stored object.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
