@@ -359,7 +359,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("successCard").style.display = "block";
 
         // ONLY Popup Notification (No browser alert dialog!)
-        showPopup("Application Submitted!", "All sections stored in object format.");
+        showPopup("Application Submitted!", "All sections stored.");
     });
 
     // Clear Button Handler for each section

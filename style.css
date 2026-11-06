@@ -120,6 +120,8 @@ body {
 
 .header-brand-row {
     display: flex;
+    flex-direction: column;
+    text-align: center;
     align-items: center;
     gap: 14px;
 }
